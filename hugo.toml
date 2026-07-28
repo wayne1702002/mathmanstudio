@@ -1,0 +1,7 @@
+baseURL = "http://localhost:1313/"
+languageCode = "zh-TW"
+title = "MathMan Studio"
+theme = "PaperMod"
+
+[pagination]
+pagerSize = 10
