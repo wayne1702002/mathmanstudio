@@ -1,0 +1,88 @@
+<link
+
+  rel="stylesheet"
+
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+
+>
+
+<script
+
+  defer
+
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js">
+
+</script>
+
+<script
+
+  defer
+
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js">
+
+</script>
+
+<script>
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    renderMathInElement(document.body, {
+
+      delimiters: [
+
+        { left: "$$", right: "$$", display: true },
+
+        { left: "$", right: "$", display: false },
+
+        { left: "\\[", right: "\\]", display: true },
+
+        { left: "\\(", right: "\\)", display: false }
+
+      ],
+
+      throwOnError: false
+
+    });
+
+  });
+
+</script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const dateBox = document.createElement("div");
+
+  const now = new Date();
+
+  const weekdays = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+
+dateBox.textContent =
+
+  now.getFullYear() + "年" +
+
+  (now.getMonth() + 1) + "月" +
+
+  now.getDate() + "日 " +
+
+  weekdays[now.getDay()];
+
+  dateBox.style.cssText =
+
+   "width:100%;max-width:1152px;margin:0 auto;padding:8px 24px;box-sizing:border-box;font-size:16px;";
+
+  document.body.prepend(dateBox);
+
+});
+
+</script>
+<style>
+
+body.list {
+
+    background: #eaf2f8 !important;
+
+}
+
+</style>

@@ -1,0 +1,74 @@
+.home-info {
+
+    min-height: auto;
+
+    margin-top: 30px;
+
+}
+.entry-content p {
+
+    display: -webkit-box;
+
+    -webkit-box-orient: vertical;
+
+    -webkit-line-clamp: 2;
+line-clamp: 2;
+    overflow: hidden;
+
+}
+.answer-box {
+
+  margin: 1.5rem 0;
+
+}
+
+.answer-box summary {
+
+  width: fit-content;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  padding: 0.5rem 0.9rem;
+
+  border: 1px solid #999;
+
+  border-radius: 8px;
+
+}
+
+.answer-box summary:hover {
+
+  opacity: 0.75;
+
+}
+
+.answer-content {
+
+  margin-top: 1rem;
+
+  padding: 1rem 1.2rem;
+
+border-left: 4px solid #999;
+
+  border-radius: 6px;
+
+}
+.answer-hide {
+
+  display: none;
+
+}
+
+.answer-box[open] .answer-show {
+
+  display: none;
+
+}
+
+.answer-box[open] .answer-hide {
+
+  display: inline;
+
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>學校沒教的數學(國中) on MathManStudio.com</title>
+    <link>http://localhost:1313/categories/%E5%AD%B8%E6%A0%A1%E6%B2%92%E6%95%99%E7%9A%84%E6%95%B8%E5%AD%B8%E5%9C%8B%E4%B8%AD/</link>
+    <description>Recent content in 學校沒教的數學(國中) on MathManStudio.com</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Thu, 09 May 2024 18:30:47 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%AD%B8%E6%A0%A1%E6%B2%92%E6%95%99%E7%9A%84%E6%95%B8%E5%AD%B8%E5%9C%8B%E4%B8%AD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>學校沒教的數學:超好用!沒有計算機的偷吃步!如何筆算平方根?</title>
+      <link>http://localhost:1313/posts/%E5%AD%B8%E6%A0%A1%E6%B2%92%E6%95%99%E7%9A%84%E6%95%B8%E5%AD%B8%E8%B6%85%E5%A5%BD%E7%94%A8%E6%B2%92%E6%9C%89%E8%A8%88%E7%AE%97%E6%A9%9F%E7%9A%84%E5%81%B7%E5%90%83%E6%AD%A5%E5%A6%82%E4%BD%95/</link>
+      <pubDate>Thu, 09 May 2024 18:30:47 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E5%AD%B8%E6%A0%A1%E6%B2%92%E6%95%99%E7%9A%84%E6%95%B8%E5%AD%B8%E8%B6%85%E5%A5%BD%E7%94%A8%E6%B2%92%E6%9C%89%E8%A8%88%E7%AE%97%E6%A9%9F%E7%9A%84%E5%81%B7%E5%90%83%E6%AD%A5%E5%A6%82%E4%BD%95/</guid>
+      <description>&lt;p&gt;今天就來學學，當學校數學考試無法使用計算機時(當然幾乎都不能用)，要如何通過&lt;strong&gt;筆算&lt;/strong&gt;來求得平方根，這可以幫助你在估計答案的時候無往不利哦!其實過程相當容易哦，只有一個模式!!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;現在說明不用計算機，馬上就可以估計根號23的方法~&lt;/p&gt;
+&lt;p&gt;首先在根號裡寫下23，接者以兩個0為一組，看需要估計到小數點下第幾位，一般來說小數點以下兩位就很夠用了，所以寫上4個0。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mathmanstudio.com/wp-content/uploads/2024/05/Untitled-Draft-1-1-1024x111.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;接著取根號23的整數部分，它是4點多&amp;hellip;.，所以取4，在23上方寫4，左方寫2個4。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mathmanstudio.com/wp-content/uploads/2024/05/Untitled-Draft-1-2-1024x220.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;接者，記得重要口訣：&lt;strong&gt;右乘左加&lt;/strong&gt;，右邊得到16，左邊得到8，再用23-16得到7，接著把旁邊的2個0掉下來&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mathmanstudio.com/wp-content/uploads/2024/05/I-00-0-1-1024x318.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;這樣就產出根號23的第一個數字4了，接者在數字8的旁邊與下方各加上一個框框，這2個框框就是小數點後第一位數字，要填入乘起來最接近700的數字，於是填入7，再用右乘左加的原則得到700-609=71，87+7=94，右側2個0掉下來，如下&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mathmanstudio.com/wp-content/uploads/2024/05/I-00-0-1-1-1-1024x493.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;繼續&lt;strong&gt;同樣的操作&lt;/strong&gt;，得到以下結果，4.79，大功告成！要求到幾位，就求到幾位！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mathmanstudio.com/wp-content/uploads/2024/05/I-00-0-1-2-1024x653.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;嘿嘿，上面的方法即使有小數點也適用哦，比如要估計23.21的平方根，就只用把00改成21就可以囉！任何數都可以用此方法找出平方根，當人家在用國中的十分逼近法找個半死的時候，你已捷足先登！&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/oxsBEt0km&#34;&gt;https://youtu.be/oxsBEt0km&lt;/a&gt;_g&lt;/p&gt;
+&lt;p&gt;影片講解&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

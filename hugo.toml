@@ -1,7 +1,71 @@
 baseURL = "http://localhost:1313/"
 languageCode = "zh-TW"
-title = "MathMan Studio"
+title = "MathManStudio.com"
 theme = "PaperMod"
 
 [pagination]
 pagerSize = 10
+[params]
+hideAuthor = true
+[params.homeInfoParams]
+
+Title = "陳偉｜國高中數學"
+
+Content = """
+
+成功繫於恆心與毅力的累積，而非在於投機與取巧的奇蹟。
+
+本站已由 WordPress 全面遷移至 Hugo，拿掉繁雜的功能與設計，沒有任何惱人廣告，回歸單純的閱讀。
+
+更快、更簡潔的介面，以及我真正想分享的數學內容。
+
+"""
+
+[[menu.main]]
+
+identifier = "home"
+
+name = "首頁"
+
+url = "/"
+
+weight = 5
+
+[[menu.main]]
+
+identifier = "exam-gsat"
+
+name = "學測"
+
+pageRef = "/categories/學測"
+
+weight = 10
+
+[[menu.main]]
+
+identifier = "exam-ast"
+
+name = "分科測驗"
+
+url = "/categories/分科測驗/"
+
+weight = 20
+
+[[menu.main]]
+
+identifier = "exam-cap"
+
+name = "會考"
+
+url = "/categories/會考/"
+
+weight = 30
+[[menu.main]]
+
+identifier = "math-articles"
+
+name = "數學文章"
+
+url = "/categories/數學文章/"
+
+weight = 40

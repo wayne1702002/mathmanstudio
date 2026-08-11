@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.164.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>MathManStudio.com</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.c7b8ef0939201563057850ae506cecf96c778e5ee3daf7faa7529c6481f0d8d0.css" integrity="sha256-x7jvCTkgFWMFeFCuUGzs&#43;Wx3jl7j2vf6p1KcZIHw2NA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link
+
+  rel="stylesheet"
+
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+
+>
+
+<script
+
+  defer
+
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js">
+
+</script>
+
+<script
+
+  defer
+
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js">
+
+</script>
+
+<script>
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    renderMathInElement(document.body, {
+
+      delimiters: [
+
+        { left: "$$", right: "$$", display: true },
+
+        { left: "$", right: "$", display: false },
+
+        { left: "\\[", right: "\\]", display: true },
+
+        { left: "\\(", right: "\\)", display: false }
+
+      ],
+
+      throwOnError: false
+
+    });
+
+  });
+
+</script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const dateBox = document.createElement("div");
+
+  const now = new Date();
+
+  const weekdays = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+
+dateBox.textContent =
+
+  now.getFullYear() + "年" +
+
+  (now.getMonth() + 1) + "月" +
+
+  now.getDate() + "日 " +
+
+  weekdays[now.getDay()];
+
+  dateBox.style.cssText =
+
+   "width:100%;max-width:1152px;margin:0 auto;padding:8px 24px;box-sizing:border-box;font-size:16px;";
+
+  document.body.prepend(dateBox);
+
+});
+
+</script>
+<style>
+
+body.list {
+
+    background: #eaf2f8 !important;
+
+}
+
+</style>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="MathManStudio.com (Alt + H)">MathManStudio.com</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首頁">
+                    <span class="active">首頁</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/%E5%AD%B8%E6%B8%AC/" title="學測">
+                    <span>學測</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97/" title="分科測驗">
+                    <span>分科測驗</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/%E6%9C%83%E8%80%83/" title="會考">
+                    <span>會考</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/%E6%95%B8%E5%AD%B8%E6%96%87%E7%AB%A0/" title="數學文章">
+                    <span>數學文章</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">學測數A 113高中數學練功系列 (內積的投影算法與圖形判斷)
+    </h2>
+  </header>
+  <div class="entry-content"><p> ★youtube影片解說★歡迎訂閱按讚謝謝! </p>
+  </div>
+  <footer class="entry-footer"><span>2023 年 12 月 10 日</span></footer>
+  <a class="entry-link" aria-label="post link to 學測數A 113高中數學練功系列 (內積的投影算法與圖形判斷)" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E7%B7%B4%E5%8A%9F%E7%B3%BB%E5%88%97-%E5%85%A7%E7%A9%8D%E7%9A%84%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95%E8%88%87%E5%9C%96%E5%BD%A2%E5%88%A4%E6%96%B7-%E5%AD%B8/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">學測數A 113高中數學練功系列 (內積的計算及性質)
+    </h2>
+  </header>
+  <div class="entry-content"><p> ★youtube影片解說★歡迎訂閱按讚謝謝! </p>
+  </div>
+  <footer class="entry-footer"><span>2023 年 12 月 8 日</span></footer>
+  <a class="entry-link" aria-label="post link to 學測數A 113高中數學練功系列 (內積的計算及性質)" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E7%B7%B4%E5%8A%9F%E7%B3%BB%E5%88%97-%E5%85%A7%E7%A9%8D%E7%9A%84%E8%A8%88%E7%AE%97%E5%8F%8A%E6%80%A7%E8%B3%AA-%E5%AD%B8%E6%B8%AC%E6%95%B8a/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">110武陵高中 第二學期 期末考 數學試題
+    </h2>
+  </header>
+  <div class="entry-content"><p>
+填充8 斜橢圓面積非現行高中數學面積
+</p>
+  </div>
+  <footer class="entry-footer"><span>2023 年 6 月 18 日</span></footer>
+  <a class="entry-link" aria-label="post link to 110武陵高中 第二學期 期末考 數學試題" href="http://localhost:1313/posts/110%E6%AD%A6%E9%99%B5%E9%AB%98%E4%B8%AD-%E7%AC%AC%E4%BA%8C%E5%AD%B8%E6%9C%9F-%E6%9C%9F%E6%9C%AB%E8%80%83-%E6%95%B8%E5%AD%B8%E8%A9%A6%E9%A1%8C/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">112年 統一入學測驗 共同科目 數學C 詳解
+    </h2>
+  </header>
+  <div class="entry-content"><p> 高職數學 一元二次方程式 兩根積 難度:★
+高職數學 乘法公式 難度:★★
+高職數學 三角比 難度:★
+高職數學 向量的內積 難度:★
+高職數學 線性規劃 難度:★
+高職數學 海龍公式 難度:★
+高職數學 矩陣的乘法 難度:★
+高職數學 旋轉矩陣 難度:★
+高職數學 平面方程式 難度:★★
+高職數學 聯立方程組 難度:★
+高職數學 絕對值不等式 難度:★★
+高職數學 多項式虛根成雙定理 難度:★★
+高職數學 等比數列 難度:★
+高職數學 積分的意義 難度:★★★
+高職數學 函數的極限 難度:★★
+...</p>
+  </div>
+  <footer class="entry-footer"><span>2023 年 6 月 15 日</span></footer>
+  <a class="entry-link" aria-label="post link to 112年 統一入學測驗 共同科目 數學C 詳解" href="http://localhost:1313/posts/112%E5%B9%B4-%E7%B5%B1%E4%B8%80%E5%85%A5%E5%AD%B8%E6%B8%AC%E9%A9%97-%E5%85%B1%E5%90%8C%E7%A7%91%E7%9B%AE-%E6%95%B8%E5%AD%B8c-%E8%A9%B3%E8%A7%A3/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">112國中會考 數學科 詳解
+    </h2>
+  </header>
+  <div class="entry-content"><p> </p>
+  </div>
+  <footer class="entry-footer"><span>2023 年 6 月 1 日</span></footer>
+  <a class="entry-link" aria-label="post link to 112國中會考 數學科 詳解" href="http://localhost:1313/posts/112%E5%9C%8B%E4%B8%AD%E6%9C%83%E8%80%83-%E6%95%B8%E5%AD%B8%E7%A7%91-%E8%A9%B3%E8%A7%A3/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">111學測試題數學B詳解
+    </h2>
+  </header>
+  <div class="entry-content"><p>
+高中數學 絕對值不等式 難度:★
+國中數學 數列(找規律) 難度:★
+高中數學 排列組合 難度:★
+高中數學 平面向量 難度:★
+高中數學 矩陣 難度:★
+高中數學 球 難度:★★
+題目稍微理解後
+其實算法超簡單
+高中數學 單點透視法 難度:★
+大考很流行
+出這類贅詞一堆真正用到只有一小部分的考題
+高中數學 直線與圓 難度:★★
+第五個選項
+用圓方程式解會變得比較複雜，不是不能解，也可以解!
+高中數學 三次函數 難度:★★
+高中數學 數據分析 難度:★★★
+第五個選項
+這種不確定對不對的選項最難判斷了
+高中數學 數據分析 難度:★
+考你內積的基本定義
+A Piece Of Cake
+...</p>
+  </div>
+  <footer class="entry-footer"><span>2023 年 5 月 15 日</span></footer>
+  <a class="entry-link" aria-label="post link to 111學測試題數學B詳解" href="http://localhost:1313/posts/111%E5%AD%B8%E6%B8%AC%E8%A9%A6%E9%A1%8C%E6%95%B8%E5%AD%B8b%E8%A9%B3%E8%A7%A3/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">111學測試題數學A詳解
+    </h2>
+  </header>
+  <div class="entry-content"><p> 高中數學 排列組合 難度:★
+高中數學 對數的運算 難度:★★
+高中數學 數據分析 難度:★★
+高中數學 指數與對數 難度:★
+高中數學 條件機率 貝氏定理 難度:★★
+高中數學 直線方程式 難度:★★
+國中數學 不等式 二次函數 一元二次方程式 難度:★★
+高中數學 三角比 難度:★★
+高中數學 平面向量 難度:★★★★
+高中數學 多項式 難度:★★★★
+高中數學 三角比 難度:★★
+高中數學 多項式 難度:★★★
+高中數學 數學期望值 難度:★★
+高中數學 矩陣 難度:★★
+...</p>
+  </div>
+  <footer class="entry-footer"><span>2023 年 4 月 25 日</span></footer>
+  <a class="entry-link" aria-label="post link to 111學測試題數學A詳解" href="http://localhost:1313/posts/111%E5%AD%B8%E6%B8%AC%E8%A9%A6%E9%A1%8C%E6%95%B8%E5%AD%B8a%E8%A9%B3%E8%A7%A3/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">111分科測驗試題數學甲詳解
+    </h2>
+  </header>
+  <div class="entry-content"><p>
+前四項為  ，接著把sigma展開得
+
+
+
+此題只要用到一些基本的對數律就可作答，答案選(3)。
+範圍:高中數學 數列級數 難度:★
+Ans:如果此三元一次方程組無解則delta必等於0，如果delta不等於0就會有一組解，我們算一下delta的行列式值
+接下來檢驗deltaX,deltaY,deltaZ的情況如果其中有一不為0的話必定無解，如果三個都等於0有可能無解或是無限多解，但這樣解有點小累….所以我把c=3代回原方程組發現，
+第一式和第三式相同，所以這種情況會是兩平面重合一平面穿過去為無限多解的情況，由此可見c=-2的情況必定是無解，此題答案選(2)。
+範圍:高中數學 三元一次聯立方程式 難度:★★
+先嘗試畫個示意圖吧!!
+題目說對角線長等於1所以可以得到  再由P到Y軸的距離可得  ，此兩式相減可得  上述過程用的都是畢氏定理。
+接著就用空間中兩向量夾角的餘弦值公式即可，忘記的同學可以複習一下內積的定義即可。
+我取X軸的方向向量  與OP向量  得到  接著用 0 代回上式可得 1 現在a,b都知道了在用對角線和為1即可得到 2
+本題答案選(4)。
+範圍:高中數學 空間向量 難度:★★★
+Ans:題目說g(x)整除f(x)所以先用長除法除除看，除了之後可以得到 3 由此兩式可以解得兩個情形 4 與 5 解著題目說g(x)=0有虛根所以判別式必須要小於0， 6 是合理的因此 7 是正解，最後將a,k套回原本的除法母式可得 8 解得 9 所以本題答案選(1)(4)。
+範圍:高中數學 多項式 難度:★★
+...</p>
+  </div>
+  <footer class="entry-footer"><span>2023 年 4 月 4 日</span></footer>
+  <a class="entry-link" aria-label="post link to 111分科測驗試題數學甲詳解" href="http://localhost:1313/posts/111%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E8%A9%A6%E9%A1%8C%E6%95%B8%E5%AD%B8%E7%94%B2%E8%A9%B3%E8%A7%A3/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">112學測試題數學B詳解
+    </h2>
+  </header>
+  <div class="entry-content"><p>
+Ans:  ，理論上轉速越高用電量越高(K&gt;0)，成正比的定義為兩個變數呈倍數關係(此倍數不為0)，圖1即為所求，知道  的長相與成正比的定義即可做出。
+範圍:高中數學 多項式 難度:★ Ans:只要會逆矩陣的求法與注意矩陣乘法沒有交換律即可輕鬆得分。
+ 答案選(2)。
+範圍:高中數學 矩陣 難度:★ Ans:假設下圖紅線為x則  選項4即為所求。
+範圍:高中數學 三角比 難度:★  29名考生的分數從小排到大後Q1為第八名學生的分數,Q2為第15名學生的分數,Q3為第22名學生的分數，先畫個盒狀圖吧
+前15名包括了Q2,Q3,P95都要加5分，這些集中趨勢量數都會跟著伸縮平移。
+因此(a,b,c,d)=(41,65,79,97) ，答案選(3)。
+範圍:國中數學 資料分析 難度:★ Ans:考基本的條件機率的定義。
+奇數球有50個，所以機率是P(抽中7號球|抽中奇數球)=  其餘選項都一樣依此類推囉! 質數有25個，  7個倍數有14個，  5個倍數有20個不是5的倍數有100-20=80個，  小於10有9個，機率是  ，此題答案為(5)。 範圍:高二數學 機率(條件機率) 難度:★ Ans:f(x)÷g(x)=可直接用長除法除，得到商為 0 餘式為 1 因此 2 解著只要把a,b關係找出即可。所以根據題意用g(x)÷f(x)可得商為 3 餘式為-3x-17其中 4 最後再把這個關係式代回P即 5 ，答案選(3)。
+...</p>
+  </div>
+  <footer class="entry-footer"><span>2023 年 3 月 14 日</span></footer>
+  <a class="entry-link" aria-label="post link to 112學測試題數學B詳解" href="http://localhost:1313/posts/112%E5%AD%B8%E6%B8%AC%E8%A9%A6%E9%A1%8C%E6%95%B8%E5%AD%B8b%E8%A9%B3%E8%A7%A3/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">112學測試題數學A詳解
+    </h2>
+  </header>
+  <div class="entry-content"><p>
+Ans:沒有懸念，由題意可得  可以推得  答案選(4)
+範圍:國一數學 指數律 難度:★
+Ans:因為tanθ沒辦法直接求，所以要先把θ換到∠COD
+於是  簡單考考正切三角比的定義而已!!
+範圍:高一數學 三角比 難度:★
+Ans:題目原本的數據是  接著老師要求把y座標取log變成  也就是說圖上的座標就是新座標的散佈圖然後要問s與t的關係為何?
+我觀察到散佈圖的斜率大約為  也就是  最後一步根據對數的定義把它寫回指數的樣子就ok拉  這題說真的還蠻不好想的，坊間高中數學的參考書也不太會出現這麼靈活的題型~
+範圍:高二數學 數據分析 難度:★★★
+Ans:根據題目的要求我們可以發現最中間的數字除了9之外其他都不可能滿足題目的要求，像這樣  因此9就可以先不管它，現在考慮1~8這8個數字前4位遞增後4位遞減就好，於是我隨便亂排一個數字出來，8個數字全取直排有8!種例如  就是其中一種，但是根據題目規則只能把前四個數字排成 0 後4個數字排成 1 也就是 2 所以前4個數字與後4個數字的排列數要除掉也就是有 3 這麼多種方法數，這題測驗組合數學中的相同物排列的基本觀念哦!!
+範圍:高二數學 排列組合 難度:★★
+陷阱題，小心別把P點當成 4 Q點當成 5 ，以(1)選項為例，直接把 6 當成三個向量擺進行列式裡加絕對值算平行六面體的體積，再用點到平面距離公式算高，點跟平面距離最遠的面積最大—&gt;馬上0分，除非(0,0,0)有在平面上才可以這樣解，出題者抓準了考生會誤用三階行列式解題的心理!
+Ans:應該再多假設1個點為T，以(1)選項為例， 7 利用 8 為三個向量張出的平行六面體體積來求解，其中 9 為平面 0 的法向量的係數積，因此可以取 1 來做計算，從第二個選項得到 2 會最大，這題考到空間向量後段很容易會忽略的計算平行六面體的公式。
+...</p>
+  </div>
+  <footer class="entry-footer"><span>2023 年 3 月 14 日</span></footer>
+  <a class="entry-link" aria-label="post link to 112學測試題數學A詳解" href="http://localhost:1313/posts/112%E5%AD%B8%E6%B8%AC%E8%A9%A6%E9%A1%8C%E6%95%B8%E5%AD%B8a%E8%A9%B3%E8%A7%A3/"></a>
+</article>
+
+<footer class="page-footer">
+
+  <nav class="pagination">
+
+    <a class="prev" href="http://localhost:1313/page/10/">« 上一頁</a>
+
+    <span class="page-numbers">
+
+        <a class="page-number" href="http://localhost:1313/">1</a>
+
+        <a class="page-number" href="http://localhost:1313/page/2/">2</a>
+
+        <a class="page-number" href="http://localhost:1313/page/3/">3</a>
+
+        <a class="page-number" href="http://localhost:1313/page/4/">4</a>
+
+        <a class="page-number" href="http://localhost:1313/page/5/">5</a>
+
+        <a class="page-number" href="http://localhost:1313/page/6/">6</a>
+
+        <a class="page-number" href="http://localhost:1313/page/7/">7</a>
+
+        <a class="page-number" href="http://localhost:1313/page/8/">8</a>
+
+        <a class="page-number" href="http://localhost:1313/page/9/">9</a>
+
+        <a class="page-number" href="http://localhost:1313/page/10/">10</a>
+
+        <strong class="page-number current">11</strong>
+
+    </span>
+
+  </nav>
+
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">MathManStudio.com</a></span> · 
+
+    
+    
+    
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

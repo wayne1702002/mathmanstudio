@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>學測 on MathManStudio.com</title>
+    <link>http://localhost:1313/categories/%E5%AD%B8%E6%B8%AC/</link>
+    <description>Recent content in 學測 on MathManStudio.com</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sun, 19 Jul 2026 19:25:37 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%AD%B8%E6%B8%AC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>114高中數學學測A (多選17)(連三餘弦定理)</title>
+      <link>http://localhost:1313/posts/114%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%AD%B8%E6%B8%ACa-%E5%A4%9A%E9%81%B817%E9%80%A3%E4%B8%89%E9%A4%98%E5%BC%A6%E5%AE%9A%E7%90%86/</link>
+      <pubDate>Sun, 19 Jul 2026 19:25:37 +0800</pubDate>
+      <guid>http://localhost:1313/posts/114%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%AD%B8%E6%B8%ACa-%E5%A4%9A%E9%81%B817%E9%80%A3%E4%B8%89%E9%A4%98%E5%BC%A6%E5%AE%9A%E7%90%86/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mathmanstudio.com/wp-content/uploads/2026/07/%E6%88%AA%E5%9C%96-2026-07-19-%E4%B8%8B%E5%8D%884.18.28-1024x192.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;先畫個示意圖吧&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mathmanstudio.com/wp-content/uploads/2026/07/%E6%88%AA%E5%9C%96-2026-07-19-%E4%B8%8B%E5%8D%884.38.48-1024x820.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第一次餘弦，先利用題目已知求AB長&lt;/p&gt;
+&lt;p&gt;$$
+cos\angle{ABC}=\frac{9+9-\overline{AC}^2}{2\times3\times3}=\frac{-1}{8}
+$$
+$$
+\overline{AC}=\frac{9}{2}
+$$&lt;/p&gt;
+&lt;p&gt;第二次餘弦&lt;/p&gt;
+&lt;p&gt;$$
+cos\phi=\frac{9+\frac{81}{4}-9}{2\times3\times\frac{9}{2}}=\frac{3}{4}
+$$&lt;/p&gt;
+&lt;p&gt;利用等弧對等圓周角&lt;/p&gt;
+&lt;p&gt;$$
+\angle{BAC}=\angle{BDC}=\phi
+$$&lt;/p&gt;
+&lt;p&gt;第三次餘弦&lt;/p&gt;
+&lt;p&gt;$$
+cos\phi=\frac{16+\overline{CD}^2-9}{2\times4\times\overline{CD}}=\frac{3}{4}
+$$&lt;/p&gt;
+&lt;p&gt;解得
+&lt;details class=&#34;answer-box&#34;&gt;
+
+ &lt;summary&gt;
+
+  &lt;span class=&#34;answer-show&#34;&gt;查看答案&lt;/span&gt;
+
+  &lt;span class=&#34;answer-hide&#34;&gt;收起答案&lt;/span&gt;
+
+&lt;/summary&gt;
+
+  &lt;div class=&#34;answer-content&#34;&gt;
+
+    $$
+\overline{CD}=3\pm\sqrt{2}(取正)
+$$
+
+  &lt;/div&gt;
+
+&lt;/details&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
