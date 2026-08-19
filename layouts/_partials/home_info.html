@@ -1,0 +1,25 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>{{ .Title | markdownify }}</h1>
+    </header>
+    <div class="entry-content md-content">
+        {{ $opts := dict "display" "block" }}
+        {{ .Content | $.Page.RenderString $opts }}
+    </div>
+    <div class="exam-countdown-wrap">
+  <div class="exam-countdown-card">
+    <div class="exam-countdown-title">116 學年度學測</div>
+    <div class="exam-countdown-days" id="gsat-countdown"></div>
+  </div>
+
+  <div class="exam-countdown-card">
+    <div class="exam-countdown-title">116 年國中教育會考</div>
+    <div class="exam-countdown-days" id="cap-countdown"></div>
+  </div>
+</div>
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+    </footer>
+</article>
+{{- end -}}

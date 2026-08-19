@@ -4,7 +4,7 @@
         {{- if site.Copyright }}
         <span>{{ site.Copyright | markdownify }}</span>
         {{- else }}
-        <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
+       <span>&copy; {{ now.Year }} {{ site.Title }}</span>
         {{- end }}
         {{- print " · "}}
     {{- end }}
@@ -21,7 +21,7 @@
         - Support us by sponsoring the project on GitHub Sponsors: https://github.com/sponsors/adityatelange
     */}}
     
-    
+  <span><a href="/index.xml">RSS 訂閱</a></span>
 </footer>
 {{- end }}
 

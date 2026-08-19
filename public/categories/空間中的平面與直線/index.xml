@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>空間中的平面與直線 on MathManStudio.com</title>
+    <link>http://localhost:1313/categories/%E7%A9%BA%E9%96%93%E4%B8%AD%E7%9A%84%E5%B9%B3%E9%9D%A2%E8%88%87%E7%9B%B4%E7%B7%9A/</link>
+    <description>Recent content in 空間中的平面與直線 on MathManStudio.com</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Thu, 16 Jul 2026 19:41:53 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E7%A9%BA%E9%96%93%E4%B8%AD%E7%9A%84%E5%B9%B3%E9%9D%A2%E8%88%87%E7%9B%B4%E7%B7%9A/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>114高中數學學測數A(多選14)</title>
+      <link>http://localhost:1313/posts/114%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%AD%B8%E6%B8%AC%E6%95%B8a%E5%A4%9A%E9%81%B814/</link>
+      <pubDate>Thu, 16 Jul 2026 19:41:53 +0800</pubDate>
+      <guid>http://localhost:1313/posts/114%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%AD%B8%E6%B8%AC%E6%95%B8a%E5%A4%9A%E9%81%B814/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mathmanstudio.com/wp-content/uploads/2026/07/%E6%88%AA%E5%9C%96-2026-07-16-%E6%99%9A%E4%B8%8A7.16.48-1024x231.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;利用點到平面距離公式可得&lt;/p&gt;
+&lt;p&gt;$$
+\frac{|4b+3c-2|}{\sqrt{4^2+3^2}}=6
+$$&lt;/p&gt;
+&lt;p&gt;絕對值內為負數，拆掉後可得&lt;/p&gt;
+&lt;p&gt;$$
+4b+3c=-28&amp;hellip;.(1)
+$$
+$$
+\frac{|3b+4c+5|}{\sqrt{3^2+4^2}}=6
+$$&lt;/p&gt;
+&lt;p&gt;如果絕對值裡是正數可得&lt;/p&gt;
+&lt;p&gt;$$
+3b+4c+5=30(不合)
+$$&lt;/p&gt;
+&lt;p&gt;絕對值內應為負，可得&lt;/p&gt;
+&lt;p&gt;$$
+3b+4c=-35&amp;hellip;.(2)
+$$&lt;/p&gt;
+&lt;p&gt;最後看E3平面&lt;/p&gt;
+&lt;p&gt;$$
+\frac{|a+2b+2c+2|}{\sqrt{1^2+2^2+2^2}}=6
+$$&lt;/p&gt;
+&lt;p&gt;絕對值內應為負，可得&lt;/p&gt;
+&lt;p&gt;$$
+a+2b+2c=-20&amp;hellip;.(3)
+$$&lt;/p&gt;
+&lt;p&gt;綜合（1）（2）（3）可解出&lt;/p&gt;
+&lt;p&gt;$$
+a=-2\quad b=-1\quad c=-8
+$$
+$$
+a+b+c=-11
+$$&lt;/p&gt;
+&lt;p&gt;Ans:-11&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

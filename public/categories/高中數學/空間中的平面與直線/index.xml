@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>空間中的平面與直線 on MathManStudio.com</title>
+    <link>http://localhost:1313/categories/%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8/%E7%A9%BA%E9%96%93%E4%B8%AD%E7%9A%84%E5%B9%B3%E9%9D%A2%E8%88%87%E7%9B%B4%E7%B7%9A/</link>
+    <description>Recent content in 空間中的平面與直線 on MathManStudio.com</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <atom:link href="http://localhost:1313/categories/%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8/%E7%A9%BA%E9%96%93%E4%B8%AD%E7%9A%84%E5%B9%B3%E9%9D%A2%E8%88%87%E7%9B%B4%E7%B7%9A/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

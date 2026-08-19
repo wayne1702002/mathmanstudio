@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/categories/%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c7b8ef0939201563057850ae506cecf96c778e5ee3daf7faa7529c6481f0d8d0.css" integrity="sha256-x7jvCTkgFWMFeFCuUGzs&#43;Wx3jl7j2vf6p1KcZIHw2NA=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4cd9edee5d7a09bad633661c0846aa3b0277d00edff5dae3a4c2cddac628b6d5.css" integrity="sha256-TNnt7l16CbrWM2YcCEaqOwJ30A7f9drjpMLN2sYottU=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -153,6 +153,235 @@ body.list {
 }
 
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const homeInfo = document.querySelector(".home-info");
+
+  if (!homeInfo) return;
+
+  const quotes = [
+    {
+      text: "數學是科學的皇后。",
+      author: "高斯"
+    },
+    {
+      text: "在數學中，提問的藝術比解答問題更有價值。",
+      author: "康托爾"
+    },
+    {
+      text: "如果人們不知道數學有多簡單，那只是因為他們沒有意識到人生有多複雜。",
+      author: "馮・諾伊曼"
+    },
+    {
+
+    text: "如果我看得比別人更遠，那是因為我站在巨人的肩膀上。",
+
+    author: "牛頓"
+
+  },
+  {
+  text: "我們必須知道，我們終將知道。",
+  author: "希爾伯特"
+},
+{
+  text: "數學是賦予不同事物相同名稱的藝術。",
+  author: "龐加萊"
+},
+{
+  text: "通往幾何學沒有皇家大道。",
+  author: "歐幾里得"
+},
+{
+  text: "正確看待數學，它不僅擁有真理，也擁有至高的美。",
+  author: "羅素"
+},
+{
+  text: "想像力比知識更重要。",
+  author: "愛因斯坦"
+},
+{
+  text: "宇宙這本書是以數學的語言寫成的。",
+  author: "伽利略"
+},
+{
+  text: "對我而言，一個方程式若不能表達上帝的思想，就毫無意義。",
+  author: "拉馬努金"
+},
+{
+  text: "科學眾多價值之中，最重要的必定是懷疑的自由。",
+  author: "費曼"
+}
+  ];
+
+ let index = Math.floor(Math.random() * quotes.length);
+
+  const quoteBox = document.createElement("div");
+  quoteBox.className = "math-quote";
+  quoteBox.innerHTML =
+   `${quotes[index].text} <br><span>— ${quotes[index].author}</span>`;
+
+  homeInfo.appendChild(quoteBox);
+
+  setInterval(function () {
+    quoteBox.style.opacity = "0";
+
+    setTimeout(function () {
+      index = (index + 1) % quotes.length;
+      quoteBox.innerHTML =
+        `「${quotes[index].text}」<br><span>— ${quotes[index].author}</span>`;
+      quoteBox.style.opacity = "1";
+    }, 600);
+
+  }, 8000);
+});
+</script>
+
+<style>
+.math-quote {
+  margin-top: 28px;
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.math-quote span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+</style>
+
+<style>
+.exam-countdown-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 28px 0 32px;
+}
+
+.exam-countdown-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px 22px;
+  text-align: center;
+}
+
+.exam-countdown-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.exam-countdown-days {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.exam-countdown-days span {
+  font-size: 38px;
+}
+
+@media (max-width: 600px) {
+  .exam-countdown-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const exams = [
+  {
+    id: "gsat-countdown",
+    name: "學測",
+    date: "2027-01-22T00:00:00+08:00"
+  },
+  {
+    id: "cap-countdown",
+    name: "會考",
+    date: "2027-05-15T00:00:00+08:00"
+  }
+];
+
+  exams.forEach(function (exam) {
+    const target = new Date(exam.date);
+    const now = new Date();
+
+    const today = new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate()
+    );
+
+    const examDay = new Date(
+      target.getFullYear(),
+      target.getMonth(),
+      target.getDate()
+    );
+
+    const diff = examDay - today;
+    const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+    const el = document.getElementById(exam.id);
+
+    if (!el) return;
+
+    if (days > 0) {
+     el.innerHTML = `距離${exam.name}還有 <span>${days}</span> 天`;
+    } else if (days === 0) {
+      el.innerHTML = "今天考試";
+    } else {
+      el.innerHTML = "本屆考試已結束";
+    }
+  });
+});
+</script>
+
+<style>
+.related-posts {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.related-posts h2 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.related-posts ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.related-posts li {
+  margin: 8px 0;
+}
+
+.related-posts a {
+  text-decoration: none;
+}
+
+.related-posts a:hover {
+  text-decoration: underline;
+}
+</style>
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCYERZFTBV"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CCYERZFTBV');
+        }
+      </script>
 </head>
 <body class="list" id="top">
     <header class="header">
@@ -204,10 +433,18 @@ body.list {
                 </a>
             </li>
             <li>
+                <a href="http://localhost:1313/categories/%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8/" title="高中數學">
+                    <span>高中數學</span>
+                </a>
+            </li>
+            <li>
                 <a href="http://localhost:1313/categories/%E6%95%B8%E5%AD%B8%E6%96%87%E7%AB%A0/" title="數學文章">
                     <span>數學文章</span>
                 </a>
             </li>
+           <li class="search-box">
+  <a href="/search/" class="search-link">搜尋文章</a>
+</li>
         </ul>
     </nav>
 </header>
@@ -218,123 +455,153 @@ body.list {
   </h1>
 </header>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">113高中數學分科測驗練功坊 指數與對數函數 (倒數129天上戰場)
-    </h2>
-  </header>
-  <div class="entry-content"><p> ★youtube影片解說★歡迎訂閱按讚謝謝! </p>
-  </div>
-  <footer class="entry-footer"><span>2024 年 3 月 6 日</span></footer>
-  <a class="entry-link" aria-label="post link to 113高中數學分科測驗練功坊 指數與對數函數 (倒數129天上戰場)" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E6%8C%87%E6%95%B8%E8%88%87%E5%B0%8D%E6%95%B8%E5%87%BD%E6%95%B8-%E5%80%92%E6%95%B8129%E5%A4%A9/"></a>
+<div class="compact-grid">
+
+<article class="compact-entry">
+
+  <a class="compact-title" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E6%8C%87%E6%95%B8%E8%88%87%E5%B0%8D%E6%95%B8%E5%87%BD%E6%95%B8-%E5%80%92%E6%95%B8129%E5%A4%A9/">
+
+    113高中數學分科測驗練功坊 指數與對數函數 (倒數129天上戰場)
+
+  </a>
+
+  <time class="compact-date">
+
+    2024 年 3 月 6 日
+
+  </time>
+
 </article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">113高中數學分科測驗練功坊 三角函數的圖形 (倒數136天上戰場)
-    </h2>
-  </header>
-  <div class="entry-content"><p> ★youtube影片解說★歡迎訂閱按讚謝謝! </p>
-  </div>
-  <footer class="entry-footer"><span>2024 年 2 月 27 日</span></footer>
-  <a class="entry-link" aria-label="post link to 113高中數學分科測驗練功坊 三角函數的圖形 (倒數136天上戰場)" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B8%E7%9A%84%E5%9C%96%E5%BD%A2-%E5%80%92%E6%95%B8136%E5%A4%A9/"></a>
+<article class="compact-entry">
+
+  <a class="compact-title" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B8%E7%9A%84%E5%9C%96%E5%BD%A2-%E5%80%92%E6%95%B8136%E5%A4%A9/">
+
+    113高中數學分科測驗練功坊 三角函數的圖形 (倒數136天上戰場)
+
+  </a>
+
+  <time class="compact-date">
+
+    2024 年 2 月 27 日
+
+  </time>
+
 </article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">113高中數學分科測驗練功坊 空間中的平面與直線 (倒數142天上戰場)
-    </h2>
-  </header>
-  <div class="entry-content"><p> ★youtube影片解說★歡迎訂閱按讚謝謝! </p>
-  </div>
-  <footer class="entry-footer"><span>2024 年 2 月 21 日</span></footer>
-  <a class="entry-link" aria-label="post link to 113高中數學分科測驗練功坊 空間中的平面與直線 (倒數142天上戰場)" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E7%A9%BA%E9%96%93%E4%B8%AD%E7%9A%84%E5%B9%B3%E9%9D%A2%E8%88%87%E7%9B%B4%E7%B7%9A-%E5%80%92/"></a>
+<article class="compact-entry">
+
+  <a class="compact-title" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E7%A9%BA%E9%96%93%E4%B8%AD%E7%9A%84%E5%B9%B3%E9%9D%A2%E8%88%87%E7%9B%B4%E7%B7%9A-%E5%80%92/">
+
+    113高中數學分科測驗練功坊 空間中的平面與直線 (倒數142天上戰場)
+
+  </a>
+
+  <time class="compact-date">
+
+    2024 年 2 月 21 日
+
+  </time>
+
 </article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">113高中數學分科測驗練功坊 三角比 (倒數144天上戰場)
-    </h2>
-  </header>
-  <div class="entry-content"><p> ★youtube影片解說★歡迎訂閱按讚謝謝! </p>
-  </div>
-  <footer class="entry-footer"><span>2024 年 2 月 19 日</span></footer>
-  <a class="entry-link" aria-label="post link to 113高中數學分科測驗練功坊 三角比 (倒數144天上戰場)" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E4%B8%89%E8%A7%92%E6%AF%94-%E5%80%92%E6%95%B8144%E5%A4%A9%E4%B8%8A%E6%88%B0%E5%A0%B4/"></a>
+<article class="compact-entry">
+
+  <a class="compact-title" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E4%B8%89%E8%A7%92%E6%AF%94-%E5%80%92%E6%95%B8144%E5%A4%A9%E4%B8%8A%E6%88%B0%E5%A0%B4/">
+
+    113高中數學分科測驗練功坊 三角比 (倒數144天上戰場)
+
+  </a>
+
+  <time class="compact-date">
+
+    2024 年 2 月 19 日
+
+  </time>
+
 </article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">113高中數學分科測驗練功坊 矩陣 (倒數148天上戰場)
-    </h2>
-  </header>
-  <div class="entry-content"><p> ★youtube影片解說★歡迎訂閱按讚謝謝! </p>
-  </div>
-  <footer class="entry-footer"><span>2024 年 2 月 15 日</span></footer>
-  <a class="entry-link" aria-label="post link to 113高中數學分科測驗練功坊 矩陣 (倒數148天上戰場)" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E7%9F%A9%E9%99%A3-%E5%80%92%E6%95%B8148%E5%A4%A9%E4%B8%8A%E6%88%B0%E5%A0%B4/"></a>
+<article class="compact-entry">
+
+  <a class="compact-title" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E7%9F%A9%E9%99%A3-%E5%80%92%E6%95%B8148%E5%A4%A9%E4%B8%8A%E6%88%B0%E5%A0%B4/">
+
+    113高中數學分科測驗練功坊 矩陣 (倒數148天上戰場)
+
+  </a>
+
+  <time class="compact-date">
+
+    2024 年 2 月 15 日
+
+  </time>
+
 </article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">113高中數學分科測驗練功坊 (極限與函數 微分)(倒數150天上戰場)
-    </h2>
-  </header>
-  <div class="entry-content"><p> ★youtube影片解說★歡迎訂閱按讚謝謝! </p>
-  </div>
-  <footer class="entry-footer"><span>2024 年 2 月 13 日</span></footer>
-  <a class="entry-link" aria-label="post link to 113高中數學分科測驗練功坊 (極限與函數 微分)(倒數150天上戰場)" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E6%A5%B5%E9%99%90%E8%88%87%E5%87%BD%E6%95%B8-%E5%BE%AE%E5%88%86%E5%80%92%E6%95%B8150%E5%A4%A9/"></a>
+<article class="compact-entry">
+
+  <a class="compact-title" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E6%A5%B5%E9%99%90%E8%88%87%E5%87%BD%E6%95%B8-%E5%BE%AE%E5%88%86%E5%80%92%E6%95%B8150%E5%A4%A9/">
+
+    113高中數學分科測驗練功坊 (極限與函數 微分)(倒數150天上戰場)
+
+  </a>
+
+  <time class="compact-date">
+
+    2024 年 2 月 13 日
+
+  </time>
+
 </article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">113高中數學分科測驗練功坊 (多項式函數 極限 微分)(倒數153天上戰場)
-    </h2>
-  </header>
-  <div class="entry-content"><p> ★youtube影片解說★歡迎訂閱按讚謝謝! </p>
-  </div>
-  <footer class="entry-footer"><span>2024 年 2 月 10 日</span></footer>
-  <a class="entry-link" aria-label="post link to 113高中數學分科測驗練功坊 (多項式函數 極限 微分)(倒數153天上戰場)" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E5%A4%9A%E9%A0%85%E5%BC%8F%E5%87%BD%E6%95%B8-%E6%A5%B5%E9%99%90-%E5%BE%AE%E5%88%86%E5%80%92/"></a>
+<article class="compact-entry">
+
+  <a class="compact-title" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E5%A4%9A%E9%A0%85%E5%BC%8F%E5%87%BD%E6%95%B8-%E6%A5%B5%E9%99%90-%E5%BE%AE%E5%88%86%E5%80%92/">
+
+    113高中數學分科測驗練功坊 (多項式函數 極限 微分)(倒數153天上戰場)
+
+  </a>
+
+  <time class="compact-date">
+
+    2024 年 2 月 10 日
+
+  </time>
+
 </article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">113高中數學分科測驗練功坊 (平面向量 共線定理)(倒數155天上戰場)
-    </h2>
-  </header>
-  <div class="entry-content"><p> ★youtube影片解說★歡迎訂閱按讚謝謝! </p>
-  </div>
-  <footer class="entry-footer"><span>2024 年 2 月 8 日</span></footer>
-  <a class="entry-link" aria-label="post link to 113高中數學分科測驗練功坊 (平面向量 共線定理)(倒數155天上戰場)" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E5%B9%B3%E9%9D%A2%E5%90%91%E9%87%8F-%E5%85%B1%E7%B7%9A%E5%AE%9A%E7%90%86%E5%80%92%E6%95%B8155/"></a>
+<article class="compact-entry">
+
+  <a class="compact-title" href="http://localhost:1313/posts/113%E9%AB%98%E4%B8%AD%E6%95%B8%E5%AD%B8%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E7%B7%B4%E5%8A%9F%E5%9D%8A-%E5%B9%B3%E9%9D%A2%E5%90%91%E9%87%8F-%E5%85%B1%E7%B7%9A%E5%AE%9A%E7%90%86%E5%80%92%E6%95%B8155/">
+
+    113高中數學分科測驗練功坊 (平面向量 共線定理)(倒數155天上戰場)
+
+  </a>
+
+  <time class="compact-date">
+
+    2024 年 2 月 8 日
+
+  </time>
+
 </article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">111分科測驗試題數學甲詳解
-    </h2>
-  </header>
-  <div class="entry-content"><p>
-前四項為  ，接著把sigma展開得
+<article class="compact-entry">
 
+  <a class="compact-title" href="http://localhost:1313/posts/111%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E8%A9%A6%E9%A1%8C%E6%95%B8%E5%AD%B8%E7%94%B2%E8%A9%B3%E8%A7%A3/">
 
+    111分科測驗試題數學甲詳解
 
-此題只要用到一些基本的對數律就可作答，答案選(3)。
-範圍:高中數學 數列級數 難度:★
-Ans:如果此三元一次方程組無解則delta必等於0，如果delta不等於0就會有一組解，我們算一下delta的行列式值
-接下來檢驗deltaX,deltaY,deltaZ的情況如果其中有一不為0的話必定無解，如果三個都等於0有可能無解或是無限多解，但這樣解有點小累….所以我把c=3代回原方程組發現，
-第一式和第三式相同，所以這種情況會是兩平面重合一平面穿過去為無限多解的情況，由此可見c=-2的情況必定是無解，此題答案選(2)。
-範圍:高中數學 三元一次聯立方程式 難度:★★
-先嘗試畫個示意圖吧!!
-題目說對角線長等於1所以可以得到  再由P到Y軸的距離可得  ，此兩式相減可得  上述過程用的都是畢氏定理。
-接著就用空間中兩向量夾角的餘弦值公式即可，忘記的同學可以複習一下內積的定義即可。
-我取X軸的方向向量  與OP向量  得到  接著用 0 代回上式可得 1 現在a,b都知道了在用對角線和為1即可得到 2
-本題答案選(4)。
-範圍:高中數學 空間向量 難度:★★★
-Ans:題目說g(x)整除f(x)所以先用長除法除除看，除了之後可以得到 3 由此兩式可以解得兩個情形 4 與 5 解著題目說g(x)=0有虛根所以判別式必須要小於0， 6 是合理的因此 7 是正解，最後將a,k套回原本的除法母式可得 8 解得 9 所以本題答案選(1)(4)。
-範圍:高中數學 多項式 難度:★★
-...</p>
-  </div>
-  <footer class="entry-footer"><span>2023 年 4 月 4 日</span></footer>
-  <a class="entry-link" aria-label="post link to 111分科測驗試題數學甲詳解" href="http://localhost:1313/posts/111%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97%E8%A9%A6%E9%A1%8C%E6%95%B8%E5%AD%B8%E7%94%B2%E8%A9%B3%E8%A7%A3/"></a>
+  </a>
+
+  <time class="compact-date">
+
+    2023 年 4 月 4 日
+
+  </time>
+
 </article>
+
+</div>
 
 <footer class="page-footer">
 
@@ -348,7 +615,7 @@ Ans:題目說g(x)整除f(x)所以先用長除法除除看，除了之後可以�
 
         <a class="page-number" href="http://localhost:1313/categories/%E5%88%86%E7%A7%91%E6%B8%AC%E9%A9%97/page/2/">2</a>
 
-        <strong class="page-number current">3</strong>
+        <span class="page-number current">3</span>
 
     </span>
 
@@ -358,11 +625,11 @@ Ans:題目說g(x)整除f(x)所以先用長除法除除看，除了之後可以�
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">MathManStudio.com</a></span> · 
+       <span>&copy; 2026 MathManStudio.com</span> · 
 
     
     
-    
+  <span><a href="/index.xml">RSS 訂閱</a></span>
 </footer>
 <a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"

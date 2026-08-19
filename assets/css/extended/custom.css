@@ -72,3 +72,134 @@ border-left: 4px solid #999;
   display: inline;
 
 }
+.compact-entry {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 6px;
+
+    padding: 18px 8px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.compact-title {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    flex: 1;
+
+}
+
+.compact-date {
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    color: var(--secondary);
+
+}
+
+@media (max-width: 700px) {
+
+    .compact-entry {
+
+        display: block;
+
+    }
+
+    .compact-date {
+
+        display: block;
+
+        margin-top: 6px;
+
+    }
+
+.compact-grid {
+
+      grid-template-columns: 1fr !important;
+
+    }}
+.compact-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 16px;
+
+}
+.page-numbers {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+}
+
+.page-number {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 28px;
+
+    height: 28px;
+
+    padding: 0 8px;
+
+    border-radius: 999px;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+}
+
+.page-number.current {
+
+    background: transparent;
+
+    color: var(--primary);
+
+    border: 2px solid var(--primary);
+
+}
+/* 高中數學分類頁 */
+
+.highschool-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px 40px;
+
+}
+@media (max-width: 600px) {
+
+    .highschool-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

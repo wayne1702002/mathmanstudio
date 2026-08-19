@@ -1,0 +1,11 @@
+{{ $category := .Get 0 }}
+{{ $term := site.GetPage (printf "/categories/%s" $category) }}
+
+{{ with $term }}
+  {{ range .Pages.ByDate.Reverse }}
+    <article>
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <p>{{ .Date.Format "2006 年 1 月 2 日" }}</p>
+    </article>
+  {{ end }}
+{{ end }}

@@ -2,6 +2,9 @@ baseURL = "http://localhost:1313/"
 languageCode = "zh-TW"
 title = "MathManStudio.com"
 theme = "PaperMod"
+[services]
+  [services.googleAnalytics]
+    id = "G-CCYERZFTBV"
 
 [pagination]
 pagerSize = 10
@@ -62,10 +65,22 @@ url = "/categories/會考/"
 weight = 30
 [[menu.main]]
 
+identifier = "high-school-math"
+
+name = "高中數學"
+
+url = "/categories/高中數學/"
+
+weight = 40
+[[menu.main]]
+
 identifier = "math-articles"
 
 name = "數學文章"
 
 url = "/categories/數學文章/"
 
-weight = 40
+weight = 50
+[outputs]
+
+home = ["HTML", "RSS", "JSON"]
