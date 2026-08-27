@@ -1,10 +1,8 @@
 baseURL = "https://mathmanstudio.com/"
 languageCode = "zh-TW"
-title = "MathManStudio.com"
+title = "MathManStudio"
 theme = "PaperMod"
-[services]
-  [services.googleAnalytics]
-    id = "G-CCYERZFTBV"
+
 
 [pagination]
 pagerSize = 10
