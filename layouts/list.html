@@ -101,7 +101,8 @@
     {{- $summary = replaceRE `(?s)\$\$.*?\$\$` "" $summary -}}
 
     {{- $summary = replaceRE `\$[^$]*\$` "" $summary -}}
-
+{{- $summary = replaceRE `查看答案|收起答案|Ans:\s*\S+` "" $summary -}}
+{{- $summary = replaceRE `(正解|答案)[：:]\s*[（(]?[0-9、,\s()（）]+` "" $summary -}}
     <p>{{ $summary }}{{ if .Truncated }}...{{ end }}</p>
 
   </div>
