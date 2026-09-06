@@ -80,9 +80,11 @@ dateBox.textContent =
 <style>
 
 body.list {
-
     background: #eaf2f8 !important;
+}
 
+[data-theme="dark"] body.list {
+    background: var(--theme) !important;
 }
 
 </style>
@@ -192,6 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
   margin: 28px 0 32px;
 }
 
+
 .exam-countdown-card {
   background: #ffffff;
   border-radius: 12px;
@@ -212,6 +215,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 .exam-countdown-days span {
   font-size: 38px;
+}
+[data-theme="dark"] .exam-countdown-card {
+    background: var(--entry);
+    color: var(--primary);
+}
+
+[data-theme="dark"] .exam-countdown-title,
+[data-theme="dark"] .exam-countdown-days {
+    color: var(--primary);
 }
 
 @media (max-width: 600px) {
